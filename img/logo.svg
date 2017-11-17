@@ -12,9 +12,9 @@
    version="1.1"
    id="svg3699"
    xml:space="preserve"
-   width="86.750664"
-   height="72.880264"
-   viewBox="0 0 86.750664 72.880264"
+   width="85.989822"
+   height="39.256432"
+   viewBox="0 0 85.989823 39.256431"
    sodipodi:docname="logo.svg"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"><metadata
      id="metadata3705"><rdf:RDF><cc:Work
@@ -39,8 +39,8 @@
      id="namedview3701"
      showgrid="false"
      inkscape:zoom="7.381971"
-     inkscape:cx="43.375332"
-     inkscape:cy="36.440132"
+     inkscape:cx="27.611863"
+     inkscape:cy="3.3864932"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -48,9 +48,10 @@
      id="g3707"
      inkscape:groupmode="layer"
      inkscape:label="Vektor-Smart-Objekt"
-     transform="matrix(1.3333333,0,0,-1.3333333,0,72.880267)"><g
+     transform="matrix(1.3333333,0,0,-1.3333333,-0.59136895,72.310075)"
+     style="display:inline"><g
        id="g3709"
-       transform="translate(-3.5559609,31.089258)"><g
+       transform="matrix(1.163071,0,0,1.2949195,-4.2081615,24.263847)"><g
          id="g3711"
          clip-path="url(#clipPath3715)"><g
            id="g3717"

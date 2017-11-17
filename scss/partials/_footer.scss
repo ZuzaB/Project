@@ -1,4 +1,22 @@
-.contact-ico{
+footer{
+  border-top: 3px solid #000;
+  font-weight: 100;
+}
+.copyrights {
+  padding: 15px 0;
+}
+.copyrights, .footer-nav {
+  flex: 0 1 50%;
+  font-size: 1rem;
+}
+.footer-nav{
+  text-transform: uppercase;
+  li{
+    padding: 0 10px;
+  }
+}
+
+.contact-ico {
   svg{
     height: 32px;
     width: 32px;
@@ -6,4 +24,11 @@
       fill: #be2592;
     }
   }
+}
+
+.menu-footer, .contact-ico {
+  float: right;
+}
+.menu-footer{
+  padding-top: 10px;
 }
