@@ -5,12 +5,12 @@
 
 li {
   display: inline-block;
-  decoration: none;
+  decoration: none;//mixin
 }
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #000;//mixin
 }
 
 .container{
@@ -25,34 +25,41 @@ a {
 }
 
 .wrap__right, .wrap__left{
-  padding-right: 20px;
-}
-
-.wrap__right{
-  padding-top: 6px;
-  transform: rotate(180deg);
+  padding-right: 30px;
 }
 
 .article {
   flex: 0 1 33%;
   padding: 50px 5px;
-  h2{
-    text-transform: uppercase;
-    font-size: 1rem;
-  }
-  a{
-    font-size: 1rem;
-    padding: 10px 40px 10px 20px;
-    background-color: #333;
-    border-radius: 20px;
-    color: #fff;
-    float: right;
-    &:hover{
-      background-color: #be2592;
-    }
+}
+
+.article__title{
+  text-transform: uppercase;
+  font-size: 1rem;
+  min-height: 3rem;
+}
+.article__button {
+  font-size: 0.9rem;
+  padding: 10px 10px;
+  background-color: #333;
+  border-radius: 20px;
+  color: #fff;
+  float: right;
+
+  &:hover {
+    background-color: #be2592;
   }
 }
 
-.hidden{
+.article__button__img{
+  width: 10%;
+  margin-left: 7px;
+}
+.article__img {
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.hidden {
   display: none;
 }
