@@ -13,6 +13,9 @@ footer{
   text-transform: uppercase;
   li{
     padding: 0 10px;
+    &:hover{
+      border-bottom: 1px solid #000;
+    }
   }
 }
 
