@@ -1,37 +1,48 @@
 footer{
-  border-top: 3px solid #000;
-  font-weight: 100;
+  border-top: 3px solid $main-color;
 }
+
 .copyrights {
   padding: 15px 0;
-}
-.copyrights, .footer-nav {
-  flex: 0 1 50%;
+  font-weight: 100;
   font-size: 1rem;
 }
-.footer-nav{
+
+.copyrights, .footer-nav {
+  flex: 0 1 50%;
+}
+
+.menu-footer{
   text-transform: uppercase;
-  li{
+  padding-top: 10px;
+  float: right;
+  font-weight: 100;
+  font-size: 1rem;
+  &__item{
     padding: 0 10px;
+    @include reset-list;
     &:hover{
-      border-bottom: 1px solid #000;
+      border-bottom: 1px solid $main-color;
     }
+  }
+  &__link{
+    @include reset-link;
   }
 }
 
 .contact-ico {
+  float: right;
+  &__item {
+    @include reset-list;
+  }
+  &__link {
+    @include reset-link;
+  }
   svg{
     height: 32px;
     width: 32px;
     &:hover{
-      fill: #be2592;
+      fill: $hover-color;
     }
   }
-}
-
-.menu-footer, .contact-ico {
-  float: right;
-}
-.menu-footer{
-  padding-top: 10px;
 }

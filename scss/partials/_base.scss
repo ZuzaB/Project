@@ -1,19 +1,11 @@
-*{
+@import '../modules/all';
+
+* {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
 }
 
-li {
-  display: inline-block;
-  decoration: none;//mixin
-}
-
-a {
-  text-decoration: none;
-  color: #000;//mixin
-}
-
-.container{
+.container {
   max-width: 1120px;
   height: auto;
   margin: 0 auto;
@@ -30,56 +22,58 @@ a {
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
-}
 
-.wrap__arrow--left{
-  background-image: url('../img/arrow_left.svg');
-  margin-right: 24px;
-}
+  &--left {
+    background-image: url('../img/arrow_left.svg');
+    margin-right: 24px;
+  }
 
-.wrap__arrow--right{
-  background-image: url('../img/arrow_right.svg');
-  margin-left: 24px;
+  &--right {
+    background-image: url('../img/arrow_right.svg');
+    margin-left: 24px;
+  }
 }
 
 .article {
   flex: 0 1 33%;
-  padding: 10px 8px 180px 8px;
-}
+  padding: 10px 8px 180px;
 
-.article__title{
-  text-transform: uppercase;
-  font-size: 1rem;
-  min-height: 3rem;
-  line-height: 1.5rem;
-}
-
-.article__button {
-  font-size: 0.9rem;
-  padding: 10px 30px 10px 15px;
-  background-color: #333;
-  border-radius: 20px;
-  color: #fff;
-  float: right;
-  position: relative;
-  &:hover {
-    background-color: #be2592;
+  &__title {
+    text-transform: uppercase;
+    font-size: 1rem;
+    min-height: 3rem;
+    line-height: 1.5rem;
   }
-}
 
-.article__button__img{
-  height: 19px;
-  width: 13px;
-  background-image: url('../img/arrow_white.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  top: 8px;
-  left: 125px;
-  position: absolute;
-}
+  &__button {
+    @include reset-link;
+    font-size: 0.9rem;
+    padding: 10px 30px 10px 15px;
+    background-color: $button-background-color;
+    border-radius: 20px;
+    color: $button-font-color;
+    float: right;
+    position: relative;
 
-.article__img {
-  width: 100%;
+    &:hover {
+      background-color: $hover-color;
+    }
+
+    &-img {
+      height: 19px;
+      width: 13px;
+      background-image: url('../img/arrow_white.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      top: 8px;
+      left: 125px;
+      position: absolute;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
 }
 
 .hidden {

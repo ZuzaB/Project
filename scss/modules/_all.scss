@@ -1,0 +1,10 @@
+@import 'colors';
+@mixin reset-list {
+  display: inline-block;
+  decoration: none;
+}
+
+@mixin reset-link {
+  text-decoration: none;
+  color: $main-color;
+}

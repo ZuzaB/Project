@@ -4,7 +4,7 @@
   height: 2.8rem;
   padding: 5px 40px;
 
-  img {
+  &__img {
     height: 200%;
   }
 }
@@ -15,7 +15,7 @@
 }
 
 .search-bar__input{
-  border: 1px solid #d8d8d8;
+  border: 1px solid $imput-border-color;
   border-radius: 17px;//mixin webki itd
   height: 33px;
   width: 204px;
@@ -27,35 +27,28 @@
 }
 
 .search-bar__ico{
-  color: #fff;
+  color: $button-font-color;
   cursor: pointer;
 }
 
-header {
-  font-weight: 100;
+.header-nav{
+  flex: 0 1 100%;
+}
 
-  h1,
-  nav {
-    flex: 0 1 100%;
+  .menu-main {
+    padding: 26px 0;
+    border-bottom: 3px solid $main-color;
     text-transform: uppercase;
-  }
-
-  nav {
-    border-bottom: 3px solid #000;
-    margin-top: 30px;
-  }
-
-  ul {
-    padding: 0;
-
-    li {
+    font-weight: 100;
+    &__item {
       padding: 0 1.7rem;
+      @include reset-list;
 
-      &:nth-child(1) {
+      &--first {
         padding-left: 0;
       }
 
-      &:nth-child(4) {
+      &--center {
         width: 11.5rem;
         position: relative;
 
@@ -64,23 +57,30 @@ header {
           display: block;
           height: 40px;
           width: 15.5rem;
-          background-color: #fff;
+          background-color: $main-backgroud-color;
           position: absolute;
           top: 1rem;
           left: -2rem;
         }
       }
 
-        &:nth-child(7) {
+        &--last {
           padding-right: 0;
         }
       }
+      &__link{
+        @include reset-link;
+        &:hover{
+        color:  $hover-color;
+        }
+      }
     }
-  }
 
-  h1 {
+  h1 {//change for class with reset
     text-align: center;
     font-size: 4.5rem;
-    font-weight: inherit;
-    padding-top: 2rem;
+    font-weight: 100;
+    padding-top: 1.5rem;
+    text-transform: uppercase;
+    flex: 0 1 100%;
   }
