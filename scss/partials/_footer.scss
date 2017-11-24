@@ -6,10 +6,11 @@ footer{
   padding: 15px 0;
   font-weight: 100;
   font-size: 1rem;
+  flex: 0 1 30%;
 }
 
-.copyrights, .footer-nav {
-  flex: 0 1 50%;
+.footer-nav {
+  flex: 0 1 70%;
 }
 
 .menu-footer{
@@ -38,10 +39,10 @@ footer{
   &__link {
     @include reset-link;
   }
-  svg{
+  &__img {
     height: 32px;
     width: 32px;
-    &:hover{
+    &:hover {
       fill: $hover-color;
     }
   }

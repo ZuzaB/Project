@@ -1,86 +1,103 @@
 .logo {
   flex: 0 1 60%;
   text-align: right;
-  height: 2.8rem;
+  height: 5rem;
   padding: 5px 40px;
 
   &__img {
-    height: 200%;
+    height: 100%;
   }
 }
 
-.search-bar {
+.search {
   flex: 0 1 40%;
-  text-align: right;
+  padding: 5px 2px 34px 4px;
+
+  &-bar {
+    width: 240px;
+    float: right;
+
+    &__input {
+      border: 1px solid $imput-border-color;
+      border-radius: 17px; //mixin webki itd
+      height: 33px;
+      width: 204px;
+      padding: 0 10px;
+      font-style: italic;
+      -webkit-box-shadow: 35px 0 0 0 rgba(0,0,0,1); //get to mixin
+      -moz-box-shadow: 35px 0 0 0 rgba(0,0,0,1);
+      box-shadow: 35px 0 0 0 rgba(0,0,0,1);
+    }
+
+    &__ico {
+      color: $button-font-color;
+      cursor: pointer;
+      padding: 5px;
+      font-size: 18px;
+      z-index: 3;
+    }
+  }
 }
 
-.search-bar__input{
-  border: 1px solid $imput-border-color;
-  border-radius: 17px;//mixin webki itd
-  height: 33px;
-  width: 204px;
-  padding: 0 10px;
-  font-style: italic;
-  -webkit-box-shadow: 35px 0px 0px 0px rgba(0,0,0,1);//get to mixin
-  -moz-box-shadow: 35px 0px 0px 0px rgba(0,0,0,1);
-  box-shadow: 35px 0px 0px 0px rgba(0,0,0,1);
-}
-
-.search-bar__ico{
-  color: $button-font-color;
-  cursor: pointer;
-}
-
-.header-nav{
+.header-nav {
   flex: 0 1 100%;
 }
 
-  .menu-main {
-    padding: 26px 0;
-    border-bottom: 3px solid $main-color;
-    text-transform: uppercase;
-    font-weight: 100;
-    &__item {
-      padding: 0 1.7rem;
-      @include reset-list;
+.menu-main {
+  border-bottom: 3px solid $main-color;
+  text-transform: uppercase;
+  font-weight: 100;
+  margin: 14px 0;
+  padding: 0px 0 22px 0;
 
-      &--first {
-        padding-left: 0;
-      }
+  &__item {
+    width: 13.5%;
+    padding: 0;
+    font-size: 19px;
+    text-align: center;
+    @include reset-list;
 
-      &--center {
-        width: 11.5rem;
-        position: relative;
+    &--first {
+      text-align: left;
+      width: 12%;
+    }
 
-        &:after {
-          content: '';
-          display: block;
-          height: 40px;
-          width: 15.5rem;
-          background-color: $main-backgroud-color;
-          position: absolute;
-          top: 1rem;
-          left: -2rem;
-        }
-      }
+    &--center {
+      width: 11.5rem;
+      position: relative;
 
-        &--last {
-          padding-right: 0;
-        }
-      }
-      &__link{
-        @include reset-link;
-        &:hover{
-        color:  $hover-color;
-        }
+      &:after {
+        content: '';
+        display: block;
+        height: 40px;
+        width: 14rem;
+        background-color: $main-backgroud-color;
+        position: absolute;
+        top: 1rem;
       }
     }
 
-  h1 {//change for class with reset
-    text-align: center;
-    font-size: 4.5rem;
-    font-weight: 100;
-    padding-top: 1.5rem;
-    text-transform: uppercase;
-    flex: 0 1 100%;
+    &--last {
+      text-align: right;
+      width: 15%;
+    }
   }
+
+  &__link {
+    @include reset-link;
+
+    &:hover {
+      color: $hover-color;
+    }
+  }
+}
+
+.motto {
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: 100;
+  padding-top: 1rem;
+  margin: 0.67em 0;
+  text-transform: uppercase;
+  flex: 0 1 100%;
+}

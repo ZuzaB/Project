@@ -1,10 +1,13 @@
 @import 'colors';
+
 @mixin reset-list {
   display: inline-block;
   decoration: none;
 }
 
 @mixin reset-link {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
   text-decoration: none;
   color: $main-color;
 }
