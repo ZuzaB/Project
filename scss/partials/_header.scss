@@ -1,11 +1,28 @@
+@import '../modules/all';
+
 .logo {
-  flex: 0 1 60%;
+  flex: 0 1 50%;
   text-align: right;
   height: 5rem;
-  padding: 5px 40px;
+  padding: 5px 0px;
+  @include for-size(tablet-landscape-up) {
+    flex: 0 1 60%;
+    padding: 5px 40px;
+  }
 
   &__img {
     height: 100%;
+  }
+}
+
+.menu-mobile{
+  font-size: 40px;
+  cursor: pointer;
+  &:hover{
+    color: $hover-color;
+  }
+  @include for-size(tablet-landscape-up) {
+  display: none;
   }
 }
 
@@ -44,6 +61,10 @@
 }
 
 .menu-main {
+  display: none;
+  @include for-size(tablet-landscape-up) {
+  display: block;
+}
   border-bottom: 3px solid $main-color;
   text-transform: uppercase;
   font-weight: 100;
@@ -93,8 +114,15 @@
 }
 
 .motto {
-  text-align: center;
+    font-size: 3rem;
+  @include for-size(tablet-portrait-up) {
+    font-size: 4rem;
+  }
+  @include for-size(tablet-landscape-up) {
   font-size: 4.5rem;
+}
+
+  text-align: center;
   font-weight: 100;
   padding-top: 1rem;
   margin: 0.67em 0;
