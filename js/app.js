@@ -7,7 +7,14 @@ document.addEventListener("DOMContentLoaded", function(e) {
       width = document.querySelector('.article').offsetWidth,
       articles = document.querySelectorAll('.article'),
       artikelsNumber = articles.length,
-      counter = 1;
+      counter = 1,
+      menue = document.querySelector('.menu-main'),
+      menuIco = document.querySelector('.menu-mobile');
+
+menuIco.addEventListener('click', function(e){
+  menue.classList.toggle('hidden');
+  this.classList.toggle('menu-mobile--change');
+});
 
 window.addEventListener('resize', function(){
   width = document.querySelector('.article').offsetWidth;

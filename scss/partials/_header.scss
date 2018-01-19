@@ -16,11 +16,37 @@
 .menu-mobile{
   font-size: 40px;
   cursor: pointer;
+  display: inline-block;
   &:hover{
-    color: $hover-color;
+    .menu-mobile__bar{
+      background-color: $hover-color;
+    }
   }
   @include for-size(tablet-landscape-up) {
-  display: none;
+    display: none;
+  }
+  &__bar {
+    width: 35px;
+    height: 5px;
+    background-color: $main-color;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  &--change{
+    .menu-mobile__bar{
+      &--first {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+         transform: rotate(-45deg) translate(-9px, 6px) ;
+      }
+      &--second {
+        opacity: 0;
+      }
+      &--third {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+        transform: rotate(45deg) translate(-8px, -8px) ;
+      }
+    }
+
   }
 }
 
@@ -56,25 +82,38 @@
 
 .header-nav {
   flex: 0 1 100%;
+  position: relative;
 }
 
 .menu-main {
-  display: none;
-  @include for-size(tablet-landscape-up) {
-  display: block;
-}
-  border-bottom: 3px solid $main-color;
+  position: absolute;
+  z-index: 1;
   text-transform: uppercase;
   font-weight: 100;
   margin: 14px 0;
   padding: 0px 0 22px 0;
+  background-color: $main-backgroud-color;
+  border: 1px solid $imput-border-color;
+  top: -69px;
+  left: 76px;
+  @include for-size(tablet-landscape-up) {
+    position: static;
+    display: block;
+    border: none;
+    border-bottom: 3px solid $main-color;
+  }
 
   &__item {
-    width: 13.5%;
-    padding: 0;
     font-size: 19px;
-    text-align: center;
-    @include reset-list;
+    padding: 10px 20px;
+    list-style-type: none;
+    @include for-size(tablet-landscape-up) {
+      @include reset-list;
+      padding: 0;
+      text-align: center;
+      width: 13.5%;
+
+    }
 
     &--first {
       text-align: left;
@@ -82,9 +121,12 @@
     }
 
     &--center {
+      display: none;
+      @include for-size(tablet-landscape-up){
+      display: inline-block;
       width: 11.5rem;
       position: relative;
-
+  }
       &:after {
         content: '';
         display: block;
@@ -94,6 +136,7 @@
         position: absolute;
         top: 1rem;
       }
+
     }
 
     &--last {
@@ -112,18 +155,17 @@
 }
 
 .motto {
-    font-size: 3rem;
-  @include for-size(tablet-portrait-up) {
-    font-size: 4rem;
-  }
-  @include for-size(tablet-landscape-up) {
-  font-size: 4.5rem;
-}
-
+  font-size: 3rem;
   text-align: center;
   font-weight: 100;
   padding-top: 1rem;
   margin: 0.67em 0;
   text-transform: uppercase;
   flex: 0 1 100%;
+  @include for-size(tablet-portrait-up) {
+    font-size: 4rem;
+  }
+  @include for-size(tablet-landscape-up) {
+  font-size: 4.5rem;
+  }
 }

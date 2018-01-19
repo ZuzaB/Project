@@ -15,7 +15,7 @@
   &--slider {
     position: relative;
     height: 550px;
-      overflow: hidden;
+    overflow: hidden;
   }
 }
 
@@ -51,7 +51,7 @@
 }
 .article {
     width: 23rem;
-    padding: 20px 10px;
+    padding: 20px 12px;
     display: inline-block;
 
   // @include for-size(tablet-portrait-up) {
