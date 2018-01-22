@@ -9,7 +9,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
       artikelsNumber = articles.length,
       counter = 1,
       menue = document.querySelector('.menu-main'),
-      menuIco = document.querySelector('.menu-mobile');
+      menuIco = document.querySelector('.menu-mobile'),
+      serchInput = document.querySelector('.search-bar__input'),
+      serch = document.querySelector('.search-bar__ico');
 
 menuIco.addEventListener('click', function(e){
   menue.classList.toggle('hidden');

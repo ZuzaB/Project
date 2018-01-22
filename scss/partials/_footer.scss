@@ -22,9 +22,6 @@ footer{
   &__item{
     padding: 0 10px;
     @include reset-list;
-    &:hover{
-      border-bottom: 1px solid $main-color;
-    }
   }
   &__link{
     @include reset-link;

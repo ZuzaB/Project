@@ -1,8 +1,12 @@
 .logo {
-  flex: 0 1 50%;
-  text-align: right;
+  flex: 0 1 80%;
+  text-align: center;
   height: 5rem;
   padding: 5px 0px;
+  @include for-size(phone-up) {
+    flex: 0 1 50%;
+    text-align: right;
+  }
   @include for-size(tablet-landscape-up) {
     flex: 0 1 60%;
     padding: 5px 40px;
@@ -14,6 +18,7 @@
 }
 
 .menu-mobile{
+  // text-align: left;
   font-size: 40px;
   cursor: pointer;
   display: inline-block;
@@ -51,12 +56,19 @@
 }
 
 .search {
-  flex: 0 1 40%;
-  padding: 5px 2px 34px 4px;
+  flex: 0 1 100%;
+  padding-top: 34px;
+  @include for-size(phone-up) {
+    flex: 0 1 40%;
+    padding: 5px 2px 34px 4px;
+  }
 
   &-bar {
     width: 240px;
-    float: right;
+    margin: 0 auto;
+    @include for-size(phone-up) {
+      float: right;
+    }
 
     &__input {
       border: 1px solid $imput-border-color;
@@ -94,8 +106,12 @@
   padding: 0px 0 22px 0;
   background-color: $main-backgroud-color;
   border: 1px solid $imput-border-color;
-  top: -69px;
-  left: 76px;
+  top: -157px;
+  left: 11em;
+  @include for-size(phone-up) {
+    top: -90px;
+    left: 6em;
+  }
   @include for-size(tablet-landscape-up) {
     position: static;
     display: block;
@@ -112,7 +128,6 @@
       padding: 0;
       text-align: center;
       width: 13.5%;
-
     }
 
     &--first {
@@ -136,9 +151,7 @@
         position: absolute;
         top: 1rem;
       }
-
     }
-
     &--last {
       text-align: right;
       width: 15%;
@@ -147,7 +160,6 @@
 
   &__link {
     @include reset-link;
-
     &:hover {
       color: $hover-color;
     }
@@ -155,13 +167,16 @@
 }
 
 .motto {
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   font-weight: 100;
   padding-top: 1rem;
   margin: 0.67em 0;
   text-transform: uppercase;
   flex: 0 1 100%;
+  @include for-size(phone-up) {
+    font-size: 3rem;
+  }
   @include for-size(tablet-portrait-up) {
     font-size: 4rem;
   }
